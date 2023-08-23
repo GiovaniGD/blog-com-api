@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DalmasBlog</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-gray-100">
+    <header class=" text-white py-6">
+        <div class="container flex items-center justify-between">
+            <div class="flex items-center">
+                DalmasBlog
+            </div>
+
+            <nav class="hidden md:flex space-x-10">
+                <a href="/inicio.html">Início</a>
+                <a href="/inicio.html">Posts</a>
+                <a href="#">Sobre</a>
+            </nav>
+            <button id="btn" class="text-2xl focus:outline-none md:hidden"></button>
+        </div>
+    </header>
+
+    <div class="container mx-auto p-4">
+        <div id="posts">
+
+        </div>
+    </div>
+
+    <footer class="text-white py-5">
+        <div class="container text-center">
+            &copy; DalmasBlog - Todos os direitos reservados!
+        </div>
+    </footer>
+
+    <script src="./js/inicio.js"></script>
+</body>
+</html>

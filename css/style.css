@@ -1,0 +1,36 @@
+body {
+    color: #28263c;
+}
+
+.container {
+    max-width: 65rem;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #28263c;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #a1a1a1;
+}
+
+#menuButton {
+    color: #a0aec0;
+    transition: color 0.3s;
+}
+
+#menuButton:hover {
+    color: #f2f2f2;
+}
+
+footer {
+    background-color: #28263c;
+}
