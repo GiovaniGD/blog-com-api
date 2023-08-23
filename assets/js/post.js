@@ -6,9 +6,6 @@ const btn = document.getElementById('btn');
 async function pegarPost(postId) {
     try {
         const response = await fetch(API + postId);
-        if (!response.ok) {
-            throw new Error('Postagem inválida');
-        }
         const data = await response.json();
         lerMais(data);
     } catch (error) {
@@ -27,11 +24,11 @@ function lerMais(post) {
         </div>
         <br>
         <div class="p-5" style="background-color: #e0e0e0; border-radius: 1rem">
-            <h1 class="text-3xl font-semibold mb-5">${post.title}</h1>
+            <h1 class="text-3xl font-semibold mb-5 font-bold">${post.title}</h1>
             <br>
-            <p class="text-gray-700">${post.description}</p>
+            <p class="text-gray-700 text-1xl">${post.description}</p>
             <br><br>
-            <p class="mt-2 text-gray-500">Escrito por ${post.profileName} em ${post.postDate}</p>
+            <p class="mt-2 text-gray-500 italic">Escrito por ${post.profileName} em ${post.postDate}</p>
             <br>
         </div>
         <br><br>
@@ -40,8 +37,8 @@ function lerMais(post) {
     allPosts.innerHTML = carregarPost;
 }
 
-const urlParams = new URLSearchParams(window.location.search);
-const postId = urlParams.get('id');
+const params = new URLSearchParams(window.location.search);
+const postId = params.get('id');
 
 if (postId) {
     pegarPost(postId);
